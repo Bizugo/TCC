@@ -1,0 +1,31 @@
+<mat-card>
+    <mat-card-title>Novo Aluno</mat-card-title>
+    <form class="form">
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="aluno.nome" name="Nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Identidade" [(ngModel)]="aluno.identidade" name="Identidade">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="CPF" [(ngModel)]="aluno.cpf" name="CPF">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Tipo de Pagamento</mat-label>
+            <mat-select (selectionChange)="SelecionaPagamento($event)">
+                <mat-option value="0">Anual</mat-option>
+                <mat-option value="1">Mensal</mat-option>
+            </mat-select>
+          </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Endereço" [(ngModel)]="aluno.endereco" name="Endereco">
+        </mat-form-field>
+    </form>
+</mat-card>
+<button mat-raised-button (click)="createAluno()" color="primary"> 
+    Salvar
+</button>
+
+<button mat-raised-button (click)="cancel()" color="warn"> 
+    Cancelar
+</button>

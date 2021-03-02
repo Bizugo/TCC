@@ -1,0 +1,539 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Studio.API</name>
+    </assembly>
+    <members>
+        <member name="T:Studio.API.SwaggerConfig">
+            <summary>
+            Classe SwaggerConfig
+            </summary>
+        </member>
+        <member name="M:Studio.API.SwaggerConfig.Register">
+            <summary>
+            Método Register
+            </summary>
+        </member>
+        <member name="M:Studio.API.SwaggerConfig.GetXmlCommentsPath">
+            <summary>
+            Método GetXmlCommentsPath
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Studio.API.WebApiConfig">
+            <summary>
+            Classe WebApiConfig
+            </summary>
+        </member>
+        <member name="M:Studio.API.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Método Register
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="T:Studio.API.Context.StudioContext">
+            <summary>
+            Classe PessoaContext
+            </summary>
+        </member>
+        <member name="M:Studio.API.Context.StudioContext.#ctor">
+            <summary>
+            Método Contrutor da Classe StudioContext
+            </summary>
+        </member>
+        <member name="P:Studio.API.Context.StudioContext.Pessoas">
+            <summary>
+            Propriedade Pessoas
+            </summary>
+        </member>
+        <member name="P:Studio.API.Context.StudioContext.Ferias">
+            <summary>
+            Propriedade Ferias
+            </summary>
+        </member>
+        <member name="P:Studio.API.Context.StudioContext.Aula">
+            <summary>
+            Propriedade Aula
+            </summary>
+        </member>
+        <member name="T:Studio.API.Controllers.AulaController">
+            <summary>
+            Classe AulaController
+            </summary>
+        </member>
+        <member name="F:Studio.API.Controllers.AulaController.aulaRepositorio">
+            <summary>
+            Propriedade IPessoaRepository
+            </summary>
+        </member>
+        <member name="M:Studio.API.Controllers.AulaController.#ctor">
+            <summary>
+            Construtor da Classe AulaController
+            </summary>
+        </member>
+        <member name="M:Studio.API.Controllers.AulaController.ConsultarAulaPorNome(System.String)">
+            <summary>
+            Método que expõe a funcionalidade de ConsultarAulaPorNome
+            </summary>
+            <param name="nome"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Studio.API.Controllers.AulaController.InserirAula(Studio.API.Entities.Aula)">
+            <summary>
+            Método que expõe a funcionalidade de InserirAula
+            </summary>
+            <param name="aula"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Studio.API.Controllers.AulaController.AtualizarAula(Studio.API.Entities.Aula)">
+            <summary>
+            Método que expõe a funcionalidade de AtualizarAula
+            </summary>
+            <param name="aula"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Studio.API.Controllers.AulaController.DeletarAula(System.String)">
+            <summary>
+            Método que expõe a funcionalidade de DeletarAula
+            </summary>
+            <param name="nome"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Studio.API.Controllers.FeriasController">
+            <summary>
+            Classe FeriasController
+            </summary>
+        </member>
+        <member name="F:Studio.API.Controllers.FeriasController.feriasRepositorio">
+            <summary>
+            Propriedade IFeriasRepository
+            </summary>
+        </member>
+        <member name="M:Studio.API.Controllers.FeriasController.#ctor">
+            <summary>
+            Construtor da Classe FeriasController
+            </summary>
+        </member>
+        <member name="M:Studio.API.Controllers.FeriasController.ConsultarFeriasPorIDPessoa(System.String)">
+            <summary>
+            Método que expõe a funcionalidade de ConsultarFeriasPorIDPessoa
+            </summary>
+            <param name="cpf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Studio.API.Controllers.FeriasController.ConsultarFeriasPorID(System.Int32)">
+            <summary>
+            Método que expõe a funcionalidade de ConsultarFeriasPorID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Studio.API.Controllers.FeriasController.InserirFerias(Studio.API.Entities.Ferias)">
+            <summary>
+            Método que expõe a funcionalidade de InserirFerias
+            </summary>
+            <param name="ferias"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Studio.API.Controllers.FeriasController.AtualizarFerias(Studio.API.Entities.Ferias)">
+            <summary>
+            Método que expõe a funcionalidade de AtualizarFerias
+            </summary>
+            <param name="ferias"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Studio.API.Controllers.FeriasController.DeletarFerias(System.Int32)">
+            <summary>
+            Método que expõe a funcionalidade de DeletarFerias
+            </summary>
+            <param name="idFerias"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Studio.API.Controllers.PessoaController">
+            <summary>
+            Classe PessoaController
+            </summary>
+        </member>
+        <member name="F:Studio.API.Controllers.PessoaController.pessoaRepositorio">
+            <summary>
+            Propriedade IPessoaRepository
+            </summary>
+        </member>
+        <member name="M:Studio.API.Controllers.PessoaController.#ctor">
+            <summary>
+            Construtor da Classe PessoaController
+            </summary>
+        </member>
+        <member name="M:Studio.API.Controllers.PessoaController.ConsultarPessoaPorCPF(System.String)">
+            <summary>
+            Método que expõe a funcionalidade de ConsultarPessoaPorCPF
+            </summary>
+            <param name="cpf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Studio.API.Controllers.PessoaController.InserirPessoa(Studio.API.Entities.Pessoa)">
+            <summary>
+            Método que expõe a funcionalidade de InserirPessoa
+            </summary>
+            <param name="pessoa"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Studio.API.Controllers.PessoaController.AtualizarPessoa(Studio.API.Entities.Pessoa)">
+            <summary>
+            Método que expõe a funcionalidade de AtualizarPessoa
+            </summary>
+            <param name="pessoa"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Studio.API.Controllers.PessoaController.DeletarPessoa(System.String)">
+            <summary>
+            Método que expõe a funcionalidade de DeletarPessoa
+            </summary>
+            <param name="cpf"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Studio.API.Entities.Aula">
+            <summary>
+            Classe Aula
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Aula.aula_id">
+            <summary>
+            Propriedade AulaID
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Aula.nome">
+            <summary>
+            Propriedade Nome
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Aula.nome_instrutor">
+            <summary>
+            Propriedade NomeInstrutor
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Aula.horario_inicio">
+            <summary>
+            Propriedade HorarioInicio
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Aula.horario_fim">
+            <summary>
+            Propriedade HorarioFim
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Aula.dias_semana">
+            <summary>
+            Propriedade DiasSemana
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Aula.sala">
+            <summary>
+            Propriedade Sala
+            </summary>
+        </member>
+        <member name="T:Studio.API.Entities.Ferias">
+            <summary>
+            Classe Ferias
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Ferias.ferias_id">
+            <summary>
+            Propriedade FeriasID
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Ferias.cpf">
+            <summary>
+            Propriedade Foreign Key CPF
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Ferias.dataInicio">
+            <summary>
+            Propiedade DataInicio
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Ferias.dataFim">
+            <summary>
+            Propiedade DataFim
+            </summary>
+        </member>
+        <member name="T:Studio.API.Entities.Pessoa">
+            <summary>
+            Classe Pessoa
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Pessoa.cpf">
+            <summary>
+            Propriedade CPF
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Pessoa.nome">
+            <summary>
+            Propriedade Nome
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Pessoa.identidade">
+            <summary>
+            Propriedade Identidade
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Pessoa.endereco">
+            <summary>
+            Propriedade Endereço
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Pessoa.data_pagamento">
+            <summary>
+            Propriedade DataPagamento
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Pessoa.inadimplente">
+            <summary>
+            Propriedade Inadimplente
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Pessoa.tipo_pagamento">
+            <summary>
+            Propriedade TipoPagamento
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Pessoa.tipo_atividade">
+            <summary>
+            Propriedade TipoAtividade
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Pessoa.funcionario">
+            <summary>
+            Propriedade Funcionário
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Pessoa.senha">
+            <summary>
+            Propriedade Senha
+            </summary>
+        </member>
+        <member name="P:Studio.API.Entities.Pessoa.tipo_pessoa">
+            <summary>
+            Propriedade TipoPessoa
+            </summary>
+        </member>
+        <member name="T:Studio.API.WebApiApplication">
+            <summary>
+            Classe WebApiApplication
+            </summary>
+        </member>
+        <member name="M:Studio.API.WebApiApplication.Application_Start">
+            <summary>
+            Método Application_Start
+            </summary>
+        </member>
+        <member name="T:Studio.API.Helpers.ValidaFerias">
+            <summary>
+            Classe ValidaFerias
+            </summary>
+        </member>
+        <member name="M:Studio.API.Helpers.ValidaFerias.VerificaPeriodo(Studio.API.Entities.Ferias)">
+            <summary>
+            Método VerificarPeriodo
+            </summary>
+            <param name="ferias"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Studio.API.Helpers.ValidaFerias.VerificaData(Studio.API.Entities.Ferias,System.Boolean)">
+            <summary>
+            Método VerificaData
+            </summary>
+            <param name="ferias"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Studio.API.Models.AulaModel">
+            <summary>
+            Classe AulaModel
+            </summary>
+        </member>
+        <member name="F:Studio.API.Models.AulaModel._context">
+            <summary>
+            Propriedade FeriasContext
+            </summary>
+        </member>
+        <member name="M:Studio.API.Models.AulaModel.#ctor(Studio.API.Context.StudioContext)">
+            <summary>
+            Construtor da Classe FeriasModel
+            </summary>
+            <param name="aulaContext"></param>
+        </member>
+        <member name="M:Studio.API.Models.AulaModel.AtualizarAula(Studio.API.Entities.Aula)">
+            <summary>
+            Método AtualizarAula
+            </summary>
+            <param name="aula"></param>
+        </member>
+        <member name="M:Studio.API.Models.AulaModel.ConsultarAulaPorNome(System.String)">
+            <summary>
+            Método ConsultarAulaPorNome
+            </summary>
+            <param name="nome"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Studio.API.Models.AulaModel.ConsultarAulas">
+            <summary>
+            Método ConsultarAulas
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Studio.API.Models.AulaModel.DeletarAula(Studio.API.Entities.Aula)">
+            <summary>
+            Método DeletarAula
+            </summary>
+            <param name="aula"></param>
+        </member>
+        <member name="M:Studio.API.Models.AulaModel.Dispose(System.Boolean)">
+            <summary>
+            Método virtual Dispose
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Studio.API.Models.AulaModel.Dispose">
+            <summary>
+            Método Dispose
+            </summary>
+        </member>
+        <member name="M:Studio.API.Models.AulaModel.InserirAula(Studio.API.Entities.Aula)">
+            <summary>
+            Método InserirAula
+            </summary>
+            <param name="aula"></param>
+        </member>
+        <member name="M:Studio.API.Models.AulaModel.Salvar">
+            <summary>
+            Método Salvar
+            </summary>
+        </member>
+        <member name="T:Studio.API.Models.FeriasModel">
+            <summary>
+            Classe FeriasModel
+            </summary>
+        </member>
+        <member name="F:Studio.API.Models.FeriasModel._context">
+            <summary>
+            Propriedade FeriasContext
+            </summary>
+        </member>
+        <member name="M:Studio.API.Models.FeriasModel.#ctor(Studio.API.Context.StudioContext)">
+            <summary>
+            Construtor da Classe FeriasModel
+            </summary>
+            <param name="feriasContext"></param>
+        </member>
+        <member name="M:Studio.API.Models.FeriasModel.AtualizaFerias(Studio.API.Entities.Ferias)">
+            <summary>
+            Método AtualizaFerias
+            </summary>
+            <param name="ferias"></param>
+        </member>
+        <member name="M:Studio.API.Models.FeriasModel.ConsultarFeriasPorID(System.Int32)">
+            <summary>
+            Método ConsultarFeriasPorIDPessoa
+            </summary>
+            <param name="idferias"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Studio.API.Models.FeriasModel.ConsultarFerias(System.String)">
+            <summary>
+            Método ConsultarFerias
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Studio.API.Models.FeriasModel.DeletarFerias(System.Int32)">
+            <summary>
+            Método DeletarFerias
+            </summary>
+            <param name="idPessoa"></param>
+        </member>
+        <member name="M:Studio.API.Models.FeriasModel.Dispose(System.Boolean)">
+            <summary>
+            Método virtual Dispose
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Studio.API.Models.FeriasModel.Dispose">
+            <summary>
+            Método Dispose
+            </summary>
+        </member>
+        <member name="M:Studio.API.Models.FeriasModel.InserirFerias(Studio.API.Entities.Ferias)">
+            <summary>
+            Método InserirFerias
+            </summary>
+            <param name="ferias"></param>
+        </member>
+        <member name="M:Studio.API.Models.FeriasModel.Salvar">
+            <summary>
+            Método Salvar
+            </summary>
+        </member>
+        <member name="T:Studio.API.Models.PessoaModel">
+            <summary>
+            Classe PessoaModel
+            </summary>
+        </member>
+        <member name="F:Studio.API.Models.PessoaModel._context">
+            <summary>
+            Propriedade PessoaContext
+            </summary>
+        </member>
+        <member name="M:Studio.API.Models.PessoaModel.#ctor(Studio.API.Context.StudioContext)">
+            <summary>
+            Construtor da Classe PessoaModel
+            </summary>
+            <param name="pessoaContext"></param>
+        </member>
+        <member name="M:Studio.API.Models.PessoaModel.AtualizaPessoa(Studio.API.Entities.Pessoa)">
+            <summary>
+            Método AtualizaPessoa
+            </summary>
+            <param name="pessoa"></param>
+        </member>
+        <member name="M:Studio.API.Models.PessoaModel.ConsultarPessoaPorCPF(System.String)">
+            <summary>
+            Método ConsultarPessoaPorCPF
+            </summary>
+            <param name="cpf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Studio.API.Models.PessoaModel.ConsultarPessoas">
+            <summary>
+            Método ConsultarPessoas
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Studio.API.Models.PessoaModel.DeletarPessoa(Studio.API.Entities.Pessoa)">
+            <summary>
+            Método DeletarPessoa
+            </summary>
+            <param name="pessoa"></param>
+        </member>
+        <member name="M:Studio.API.Models.PessoaModel.Dispose(System.Boolean)">
+            <summary>
+            Método virtual Dispose
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Studio.API.Models.PessoaModel.Dispose">
+            <summary>
+            Método Dispose
+            </summary>
+        </member>
+        <member name="M:Studio.API.Models.PessoaModel.InserirPessoa(Studio.API.Entities.Pessoa)">
+            <summary>
+            Método InserirPessoa
+            </summary>
+            <param name="pessoa"></param>
+        </member>
+        <member name="M:Studio.API.Models.PessoaModel.Salvar">
+            <summary>
+            Método Salvar
+            </summary>
+        </member>
+    </members>
+</doc>

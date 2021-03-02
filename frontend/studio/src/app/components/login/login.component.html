@@ -1,0 +1,16 @@
+<mat-card class="mat-elevation-z9">
+    <mat-card-title>Login</mat-card-title>
+    <form>
+        <mat-form-field class="form">
+            <input matInput maxlength="14" placeholder="CPF" [(ngModel)]="cpf" name="CPF">
+            
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="password" maxlength="8" matInput placeholder="Senha" [(ngModel)]="senha" name="Senha">
+            
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="Login()" color="primary"> 
+        Logar
+    </button>
+</mat-card>

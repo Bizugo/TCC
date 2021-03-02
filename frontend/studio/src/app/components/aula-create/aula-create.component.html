@@ -1,0 +1,35 @@
+<mat-card>
+    <mat-card-title>Nova Aula</mat-card-title>
+    <form class="form">
+        <mat-form-field>
+            <input matInput placeholder="Nome da Aula" [(ngModel)]="aula.nome" name="Nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Nome do Instrutor" [(ngModel)]="aula.nome_instrutor" name="NomeInstrutor">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Horário Início" [(ngModel)]="aula.horario_inicio" name="horarioInicio">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Horário Fim" [(ngModel)]="aula.horario_fim" name="horarioFim">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Sala" [(ngModel)]="aula.sala" name="Sala">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Dias de Aula</mat-label>
+            <mat-select (selectionChange)="SelecionaDias($event)">
+                <mat-option value="0">TODOS</mat-option>
+                <mat-option value="1">SEG, QUA, SEX</mat-option>
+                <mat-option value="2">TER, QUI, SÁB</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </form>
+</mat-card>
+<button mat-raised-button (click)="createAula()" color="primary"> 
+    Salvar
+</button>
+
+<button mat-raised-button (click)="cancel()" color="warn"> 
+    Cancelar
+</button>

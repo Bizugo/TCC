@@ -1,0 +1,29 @@
+<mat-card>
+    <mat-card-title>Cadastrar Férias</mat-card-title>
+    <form class="form">
+        <mat-form-field>
+            <input matInput placeholder="CPF" [(ngModel)]="ferias.cpf" name="CPF">
+        </mat-form-field>
+        <mat-form-field color="accent" appearance="fill">
+            <mat-label>Data Início</mat-label>
+            <input matInput [matDatepicker]="picker1" placeholder="Data Início" [(ngModel)]="ferias.dataInicio"
+                name="dataInicio" disabled>
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1 disabled="false"></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field color="accent" appearance="fill">
+            <mat-label>Data Fim</mat-label>
+            <input matInput [matDatepicker]="picker2" placeholder="Data Fim" [(ngModel)]="ferias.dataFim" name="dataFim"
+                disabled>
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2 disabled="false"></mat-datepicker>
+        </mat-form-field>
+    </form>
+</mat-card>
+<button mat-raised-button (click)="createFerias()" color="primary">
+    Salvar
+</button>
+
+<button mat-raised-button (click)="cancel()">
+    Cancelar
+</button>

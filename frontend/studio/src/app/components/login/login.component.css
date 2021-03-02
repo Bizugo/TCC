@@ -1,0 +1,13 @@
+.form {
+  display: flex;
+}
+
+button {
+  margin: 10px 0 0 0;
+}
+
+.mat-card {
+  width: 20%;
+  margin-left: 38%;
+  margin-top: 10%;
+}

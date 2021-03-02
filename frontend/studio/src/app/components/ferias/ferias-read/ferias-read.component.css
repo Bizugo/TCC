@@ -1,0 +1,20 @@
+a {
+    cursor: pointer;
+}
+
+table {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.edit {
+    margin-right: 10px;
+}
+
+i.edit {
+    color:#ff4081
+}
+
+i.delete {
+    color:#f44336
+}

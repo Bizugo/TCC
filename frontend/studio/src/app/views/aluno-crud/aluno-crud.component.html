@@ -1,0 +1,49 @@
+<button mat-raised-button (click)="navegarParaAlunoCreate()" color="primary">
+    Novo Aluno
+</button>
+<button mat-raised-button (click)="atualizarAluno()" color="accent">
+    Alterar Aluno
+</button>
+<button mat-raised-button (click)="deletarAluno()" color="warn">
+    Deletar Aluno
+</button>
+<mat-card>
+    <mat-card-title>Aluno</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Pesquisar" [(ngModel)]="cpfPesquisa" name="Pesquisar">
+            <mat-icon matSuffix>
+                <a mat-list-item (click)="buscarAluno()">
+                    <i class="material-icons"> 
+                        search
+                    </i>
+                </a>
+            </mat-icon>
+        </mat-form-field>
+    </form>
+    <form class="form">
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="aluno.nome" name="Nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Identidade" [(ngModel)]="aluno.identidade" name="Identidade">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="CPF" [(ngModel)]="aluno.cpf" name="CPF" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Data Pagamento" [(ngModel)]="aluno.data_pagamento" name="DataPagamento" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Tipo de Pagamento</mat-label>
+            <mat-select name="selectedPagamento" (selectionChange)="SelecionaPagamento($event)" [(ngModel)]="selectedPagamento">
+                <!-- <mat-option value="0">Anual</mat-option>
+                <mat-option value="1">Mensal</mat-option> -->
+                <mat-option *ngFor="let opcao of pagamentos" value={{opcao.valor}}>{{opcao.desc}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Endereço" [(ngModel)]="aluno.endereco" name="Endereco">
+        </mat-form-field>
+    </form>
+</mat-card>
