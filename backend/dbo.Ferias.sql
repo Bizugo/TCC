@@ -1,9 +1,9 @@
-﻿CREATE TABLE [dbo].[Ferias]
-(
-	[ferias_id] INT NOT NULL PRIMARY KEY, 
-    [cpf] NVARCHAR(14) NOT NULL, 
-    [ativo] BIT NOT NULL, 
-    [dataInicio] DATE NOT NULL, 
-    [dataFim] DATE NOT NULL, 
-    CONSTRAINT [FK_Pessoa_Ferias] FOREIGN KEY ([cpf]) REFERENCES [Pessoa]([cpf])
-)
+﻿CREATE TABLE [dbo].[Ferias] (
+    [ferias_id]  INT           IDENTITY (1, 1) NOT NULL,
+    [cpf]        NVARCHAR (14) NOT NULL,
+    [dataInicio] DATETIME      NOT NULL,
+    [dataFim]    DATETIME      NOT NULL,
+    CONSTRAINT [PK_dbo.Ferias] PRIMARY KEY CLUSTERED ([ferias_id] ASC), 
+    CONSTRAINT [FK_Ferias_Pessoas] FOREIGN KEY ([cpf]) REFERENCES [Pessoas]([cpf])
+);
+
